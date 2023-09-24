@@ -1,22 +1,22 @@
 
 cargaFunciones=function(preguntar=TRUE){
 
-  
+
   if (isTRUE(preguntar)){
-    
+
     print(" Para instalar algunas librerias debe instalar previamente")
     respuestaGFortran=readline("GFortran en su computadora. Lo tiene instalado? (si / no):")
-    
+
     switch (respuestaGFortran,
             "si"={
-              
+
               libreriasACargar()
-              
+
               cat("\f")
               print("Las librerías necesarias para las simulaciones de investigación se encuentran cargadas...")
-              
+
             },
-            
+
             "no"={
               cat("\f")
               print("Por favor instale primero GFortran en esta liga:")
@@ -30,11 +30,11 @@ cargaFunciones=function(preguntar=TRUE){
               print("https://github.com/fxcoudert/gfortran-for-macOS/releases")
             }
     )
-    
+
   } else {
-    
+
     libreriasACargar()
-    
+
     # Quandl token:
     set_app_id('617a3f4d2db44d8f859314f8b45307a9be2d33cd')
     # Banxico token
@@ -42,18 +42,18 @@ cargaFunciones=function(preguntar=TRUE){
     setToken(banxico.token)
     # FRED tocken:
     fredr_set_key("6f5316a46db96bafecb5431706a63bad")
-    
+
     cat("\f")
     print("Las librerías necesarias para las simulaciones de investigación se encuentran cargadas...")
-    
-  }  
-  
+
+  }
+
   }
 
 cat("\f")
 
 libreriasACargar=function(){
-  
+
   if (!require(Quandl)) {install.packages('Quandl')
     library(Quandl)} else {library(Quandl)}
   if (!require(devtools)) {install.packages('devtools')
@@ -117,20 +117,26 @@ libreriasACargar=function(){
   if (!require(ggpubr)) {install.packages('ggpubr')
     library(ggpubr)} else {library(ggpubr)}
   if (!require(neuralnet)) {install.packages('neuralnet')
-    library(neuralnet)} else {library(neuralnet)}   
+    library(neuralnet)} else {library(neuralnet)}
   if (!require(httr)) {install.packages('httr')
-    library(httr)} else {library(httr)}                 
+    library(httr)} else {library(httr)}
   if (!require(jsonlite)) {install.packages('jsonlite')
-    library(jsonlite)} else {library(jsonlite)}   
+    library(jsonlite)} else {library(jsonlite)}
   if (!require(fredr)) {install.packages('fredr')
-    library(fredr)} else {library(fredr)} 
+    library(fredr)} else {library(fredr)}
   if (!require(reshape)) {install.packages('reshape')
-    library(reshape)} else {library(reshape)} 
+    library(reshape)} else {library(reshape)}
   if (!require(reshape2)) {install.packages('reshape2')
-    library(reshape2)} else {library(reshape2)}   
+    library(reshape2)} else {library(reshape2)}
   if (!require(rugarch)) {install.packages('rugarch')
-    library(rugarch)} else {library(rugarch)}     
-  
+    library(rugarch)} else {library(rugarch)}
+  if (!require(fGarch)) {install.packages('fGarch')
+    library(fGarch)} else {library(fGarch)}
+  if (!require(car)) {install.packages('car')
+    library(car)} else {library(car)}
+  if (!require(sandwich)) {install.packages('sandwich')
+    library(sandwich)} else {library(sandwich)}
+
   # Quandl token:
   set_app_id('617a3f4d2db44d8f859314f8b45307a9be2d33cd')
   # Banxico token
@@ -138,6 +144,6 @@ libreriasACargar=function(){
   setToken(banxico.token)
   # FRED tocken:
   fredr_set_key("6f5316a46db96bafecb5431706a63bad")
-  
+
 }
 
