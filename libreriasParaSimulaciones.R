@@ -102,8 +102,8 @@ libreriasACargar=function(){
     library(lubridate)} else {library(lubridate)}
   if (!require(siebanxicor)) {install.packages("siebanxicor")
     library(siebanxicor)} else {library(siebanxicor)}
-  if (!require(tictoc)) {install.packages("tictoc")
-    library(tictoc)} else {library(tictoc)}
+  if (!require(plotly)) {install.packages("plotly")
+    library(plotly)} else {library(plotly)}
   if (!require(depmixS4)) {install.packages("depmixS4")
     library(depmixS4)} else {library(depmixS4)}
   if (!require(tibble)) {install.packages("tibble")
@@ -136,6 +136,10 @@ libreriasACargar=function(){
     library(car)} else {library(car)}
   if (!require(sandwich)) {install.packages('sandwich')
     library(sandwich)} else {library(sandwich)}
+  if (!require(flextable)) {install.packages('flextable')
+    library(flextable)} else {library(flextable)}
+  if (!require(officer)) {install.packages('officer')
+    library(officer)} else {library(officer)}
 
   # Quandl token:
   set_app_id('617a3f4d2db44d8f859314f8b45307a9be2d33cd')
