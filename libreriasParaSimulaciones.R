@@ -151,3 +151,35 @@ libreriasACargar=function(){
 
 }
 
+# Funciones a la medida:
+
+# Convierte data.frame de diario a semanal:
+
+
+tabla.semanal=function(datos){
+  data=datos
+  semanas=as.character(cut(datos$Date,"week"))
+  data$semanas=semanas
+  semanas=levels(factor(semanas))
+  columnas=colnames(datos)
+  for (a in 1:length(semanas)){
+    if (a<2){
+      dateRowId=min(which(data$semanas==semanas[a]))
+      
+      datosSemanal=as.data.frame(
+        c(semanas[a],data[dateRowId,2:ncol(datos)])
+      )
+      colnames(datosSemanal)=columnas
+    } else {
+      dateRowId=min(which(data$semanas==semanas[a]))
+      
+      datosSemanalb=as.data.frame(
+        c(semanas[a],data[dateRowId,2:ncol(datos)])
+      )
+      colnames(datosSemanalb)=columnas
+      
+      datosSemanal=rbind(datosSemanal,datosSemanalb)
+    }
+  }
+  return(datosSemanal)
+}
