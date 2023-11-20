@@ -10,7 +10,7 @@ cargaFunciones=function(preguntar=TRUE,MSGARCHinstall=FALSE){
     switch (respuestaGFortran,
             "si"={
 
-              libreriasACargar(MSGARCHinstall=FALSE)
+              libreriasACargar(MSGARCHinstall)
 
               cat("\f")
               print("Las librerías necesarias para las simulaciones de investigación se encuentran cargadas...")
@@ -33,7 +33,7 @@ cargaFunciones=function(preguntar=TRUE,MSGARCHinstall=FALSE){
 
   } else {
 
-    libreriasACargar(MSGARCHinstall=FALSE)
+    libreriasACargar(MSGARCHinstall)
 
     # Quandl token:
     set_app_id('617a3f4d2db44d8f859314f8b45307a9be2d33cd')
@@ -52,7 +52,7 @@ cargaFunciones=function(preguntar=TRUE,MSGARCHinstall=FALSE){
 
 cat("\f")
 
-libreriasACargar=function(MSGARCHinstall=FALSE){
+libreriasACargar=function(MSGARCHinstall){
 
   if (!require(Quandl)) {install.packages('Quandl')
     library(Quandl)} else {library(Quandl)}
