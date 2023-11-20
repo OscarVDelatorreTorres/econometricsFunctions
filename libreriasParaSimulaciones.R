@@ -10,7 +10,7 @@ cargaFunciones=function(preguntar=TRUE,MSGARCHinstall=FALSE){
     switch (respuestaGFortran,
             "si"={
 
-              libreriasACargar()
+              libreriasACargar(MSGARCHinstall=FALSE)
 
               cat("\f")
               print("Las librerías necesarias para las simulaciones de investigación se encuentran cargadas...")
