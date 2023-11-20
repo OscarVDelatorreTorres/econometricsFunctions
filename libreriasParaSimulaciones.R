@@ -52,7 +52,7 @@ cargaFunciones=function(preguntar=TRUE,MSGARCHinstall=FALSE){
 
 cat("\f")
 
-libreriasACargar=function(MSGARCHinstall){
+libreriasACargar=function(MSGARCHinstall=FALSE){
 
   if (!require(Quandl)) {install.packages('Quandl')
     library(Quandl)} else {library(Quandl)}
