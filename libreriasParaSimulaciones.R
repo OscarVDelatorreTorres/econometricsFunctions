@@ -1,5 +1,5 @@
 
-cargaFunciones=function(preguntar=TRUE){
+cargaFunciones=function(preguntar=TRUE,MSGARCHinstall=FALSE){
 
 
   if (isTRUE(preguntar)){
@@ -52,7 +52,7 @@ cargaFunciones=function(preguntar=TRUE){
 
 cat("\f")
 
-libreriasACargar=function(){
+libreriasACargar=function(MSGARCHinstall){
 
   if (!require(Quandl)) {install.packages('Quandl')
     library(Quandl)} else {library(Quandl)}
@@ -78,8 +78,13 @@ libreriasACargar=function(){
     library(fracdiff)} else {library(fracdiff)}
   #if (!require(pomp)) {devtools::install_github("kingaa/pomp")
   # library(pomp)} else {library(pomp)}
-  if (!require(MSGARCH)) {devtools::install_github("keblu/MSGARCH", subdir="Package")
-    library(MSGARCH)} else {library(MSGARCH)}
+  if (isTRUE(MSGARCHinstall)){
+    if (!require(MSGARCH)) {devtools::install_github("keblu/MSGARCH", subdir="Package")
+      library(MSGARCH)} else {library(MSGARCH)}    
+  }
+
+  
+  
   if (!require(vars)) {install.packages('vars')
     library(vars)} else {library(vars)}
   if (!require(tictoc)) {install.packages('tictoc')
