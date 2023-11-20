@@ -76,6 +76,9 @@ libreriasACargar=function(MSGARCHinstall){
     library(MTS)} else {library(MTS)}
   if (!require(fracdiff)) {install.packages('fracdiff')
     library(fracdiff)} else {library(fracdiff)}
+  if (!require(plm)) {install.packages('plm')
+    library(plm)} else {library(plm)}
+  
   #if (!require(pomp)) {devtools::install_github("kingaa/pomp")
   # library(pomp)} else {library(pomp)}
   if (isTRUE(MSGARCHinstall)){
@@ -146,6 +149,70 @@ libreriasACargar=function(MSGARCHinstall){
   if (!require(officer)) {install.packages('officer')
     library(officer)} else {library(officer)}
 
+
+  if (!require(openxlsx)) {install.packages('openxlsx')
+    library(openxlsx)} else {library(openxlsx)}
+  if (!require(lubridate)) {install.packages('lubridate')
+    library(lubridate)} else {library(lubridate)}
+  if (!require(kableExtra)) {install.packages('kableExtra')
+    library(kableExtra)} else {library(kableExtra)}
+  if (!require(pglm)) {install.packages('pglm')
+    library(pglm)} else {library(pglm)}
+  if (!require(sandwich)) {install.packages('sandwich')
+    library(sandwich)} else {library(sandwich)}
+  if (!require(stargazer)) {install.packages('stargazer')
+    library(stargazer)} else {library(stargazer)}
+  if (!require(lmtest)) {install.packages('lmtest')
+    library(lmtest)} else {library(lmtest)}
+  if (!require(tseries)) {install.packages('tseries')
+    library(tseries)} else {library(tseries)}
+  if (!require(lubridate)) {install.packages('lubridate')
+    library(lubridate)} else {library(lubridate)}
+  if (!require(plm)) {install.packages('plm')
+    library(plm)} else {library(plm)}
+  if (!require(plotly)) {install.packages('plotly')
+    library(plotly)} else {library(plotly)}
+  if (!require(foreach)) {install.packages('foreach')
+    library(foreach)} else {library(foreach)}
+  if (!require(doParallel)) {install.packages('doParallel')
+    library(doParallel)} else {library(doParallel)}
+  if (!require(ranger)) {install.packages('ranger')
+    library(ranger)} else {library(ranger)}
+  if (!require(cvar)) {install.packages('cvar')
+    library(cvar)} else {library(cvar)}
+  if (!require(PortfolioAnalytics)) {install.packages('PortfolioAnalytics')
+    library(PortfolioAnalytics)} else {library(PortfolioAnalytics)}
+  if (!require(quantmod)) {install.packages('quantmod')
+    library(quantmod)} else {library(quantmod)}
+  if (!require(fPortfolio)) {install.packages('fPortfolio')
+    library(fPortfolio)} else {library(fPortfolio)}
+  if (!require(imputeTS)) {install.packages('imputeTS')
+    library(imputeTS)} else {library(imputeTS)}
+  if (!require(forecast)) {install.packages('forecast')
+    library(forecast)} else {library(forecast)}
+  if (!require(tseries)) {install.packages('tseries')
+    library(tseries)} else {library(tseries)}
+  if (!require(vars)) {install.packages('vars')
+    library(vars)} else {library(vars)}
+  if (!require(dynlm)) {install.packages('dynlm')
+    library(dynlm)} else {library(dynlm)}
+  if (!require(MTS)) {install.packages('MTS')
+    library(MTS)} else {library(MTS)}
+  if (!require(lmtest)) {install.packages('lmtest')
+    library(lmtest)} else {library(lmtest)}
+  if (!require(car)) {install.packages('car')
+    library(car)} else {library(car)}
+  if (!require(sandwich)) {install.packages('sandwich')
+    library(sandwich)} else {library(sandwich)}
+  if (!require(dplyr)) {install.packages('dplyr')
+    library(dplyr)} else {library(dplyr)}
+  if (!require(readxl)) {install.packages('readxl')
+    library(readxl)} else {library(readxl)}
+  if (!require(flextable)) {install.packages('flextable')
+    library(flextable)} else {library(flextable)}
+  if (!require(officer)) {install.packages('officer')
+    library(officer)} else {library(officer)}
+  
   # Quandl token:
   set_app_id('617a3f4d2db44d8f859314f8b45307a9be2d33cd')
   # Banxico token
