@@ -87,7 +87,8 @@ libreriasACargar=function(MSGARCHinstall){
   }
 
   
-  
+  if (!require(MSwM)) {install.packages('MSwM')
+    library(MSwM)} else {library(MSwM)}  
   if (!require(vars)) {install.packages('vars')
     library(vars)} else {library(vars)}
   if (!require(tictoc)) {install.packages('tictoc')
